@@ -55,6 +55,9 @@ module.exports = function (app) {
   // Set user routes as a subgroup/middleware to apiRoutes
     apiRoutes.use('/user', userRoutes);
 
+  // Get all users
+    userRoutes.get('/users', requireAuth, UserController.getUsers);
+
   // View user profile route
     userRoutes.get('/:userId', requireAuth, UserController.viewProfile);
 

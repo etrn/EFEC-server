@@ -4,7 +4,7 @@ module.exports = {
   // Database connection information
     database: 'mongodb://e:e@ds149491.mlab.com:49491/tests',
   // Setting port for server
-    port: 3000,
+    PORT: 3000,
   // MailGun
     resetPs: 'sk_c5e54c84fb877768f1331d171df49f13',
   // Social login-passport strategies

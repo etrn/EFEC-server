@@ -7,6 +7,18 @@ const BADRQST = require('../constatns').BADRQST;
 //= =======================================
 // User Routes
 //= =======================================
+exports.getUsers = function (req, res, next) {
+    const allUsers = [];
+    User.find({}).toArray((err, users => {
+        return res.status(OK).json({ users: allUsers });
+    }));
+};
+exports.getOnlineUsers = function (req, res, next) {
+    const onlineUsers = [];
+    User.find({ status: true }).toArray((err, users => {
+        return res.status(OK).json({ users: onlineUsers });
+    }));
+};
 exports.viewProfile = function (req, res, next) {
     const userId = req.params.userId;
 

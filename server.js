@@ -13,10 +13,11 @@ const router = require('./router');
 const Mongoose = require('mongoose');
 const socketEvents = require('./socketEvents');
 const config = require('./config/main');
-
+const PORT = process.env.PORT || config.PORT;
+const DBURI = process.env.database || config.database;
 // Database Setup
 //mongoose.connect(config.database);
-Mongoose.connect(config.database);
+Mongoose.connect(DBURI);
 Mongoose.connection.on('error', err => {
     if (err) throw err;
 });
@@ -25,8 +26,8 @@ Mongoose.Promise = global.Promise;
 let server;
 
 if (process.env.NODE_ENV !== config.test_env) {
-    server = app.listen(config.port);
-    console.info(`Your server is running on port ${config.port}.`);
+    server = app.listen(PORT);
+    console.info(`Magichappens at ${PORT}.`);
 } else
   server = app.listen(config.test_port);
 
