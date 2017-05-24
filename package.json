@@ -1,0 +1,50 @@
+{
+  "name": "efec-chat-server",
+  "version": "1.0.0",
+  "description": "Eleks Fron-End Camp Chat server API using Node.js Express Mongoose JWT Passport and Socket.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etrn/EFEC-server.git"
+  },
+  "author": "Taras Pashko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/etrn/EFEC-server/issues"
+  },
+  "homepage": "https://github.com/etrn/EFEC-server#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.2",
+    "compression": "^1.6.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "helmet": "^3.6.1",
+    "jsonwebtoken": "^7.4.1",
+    "mongoose": "^4.10.2",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth20": "^1.0.0",
+    "passport-jwt": "^2.2.1",
+    "passport-local": "^1.0.0",
+    "passport-twitter": "^1.0.4",
+    "request": "^2.81.0",
+    "socket.io": "^2.0.1",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "@eleks/eslint-config-eleks": "^0.2.1",
+    "babel-eslint": "^7.1.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.6.0",
+    "nodemon": "^1.11.0"
+  }
+}
